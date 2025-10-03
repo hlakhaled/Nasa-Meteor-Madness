@@ -311,9 +311,9 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
           backgroundColor: "#0b0b0d",
           borderRadius: "12px",
           border: `2px solid ${devastation.border}`,
-          maxWidth: "650px",
+          maxWidth: "500px",
           width: "100%",
-          maxHeight: "70vh",
+          maxHeight: "85vh",
           overflowY: "auto",
           boxShadow: `0 0 30px ${devastation.color}90, inset 0 0 20px ${devastation.color}20`,
           animation: "slideUp 0.4s ease-out",
@@ -336,33 +336,49 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
           >
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
               <div style={{ fontSize: "clamp(18px, 2.5vw, 22px)" }}>
-                {isOcean ? "♒︎" : "ᨒ"}
               </div>
               <div>
-                <h2
-                  className="inter-text"
-                  style={{
-                    fontSize: "clamp(16px, 2.2vw, 20px)",
-                    fontWeight: "700",
-                    color: "#fff",
-                    margin: 0,
-                    textShadow: "0 2px 8px rgba(0,0,0,0.5)",
-                  }}
-                >
-                  Impact Analysis
-                </h2>
-                <div
-                  className="inter-text"
-                  style={{
-                    marginTop: "4px",
-                    fontSize: "clamp(10px, 1.2vw, 12px)",
-                    color: "rgba(255,255,255,0.9)",
-                    fontWeight: "500",
-                  }}
-                >
-                  {asteroid.name} → {target.region}{" "}
-                  {isOcean ? "(Ocean)" : "(Land)"}
-                </div>
+               
+               
+               <h2
+  className="inter-text"
+  style={{
+    fontSize: "clamp(16px, 2.2vw, 20px)",
+    fontWeight: "700",
+    color: "#fff",
+    margin: 0,
+    textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+  }}
+>
+  <span>{isOcean ? "♒︎" : "ᨒ"}</span>
+  Impact Analysis
+</h2>
+
+               
+               
+               
+               
+
+               
+               
+
+
+              <div
+              className="inter-text"
+              style={{
+                marginTop: "4px",
+             fontSize: "clamp(10px, 1.2vw, 12px)",
+             color: "rgba(255,255,255,0.9)",
+              fontWeight: "500",
+              gap: "8px",
+                 }}
+              >
+  {asteroid.name} → {target.region} {isOcean ? "(Ocean)" : "(Land)"}
+</div>
+
               </div>
             </div>
             <button
