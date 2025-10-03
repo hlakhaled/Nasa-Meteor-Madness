@@ -10,7 +10,10 @@
 ## Features
 
 ### 1. Defend Earth Game 🎮
-- Interactive simulation game where users prevent asteroid collisions.
+
+**Defend Earth** is an interactive simulation game where users prevent asteroid collisions with Earth. Players engage in strategic decision-making using real physics-based planetary defense methods.
+
+**Key Features:**
 - Choose from **four real deflection methods**:
   - Nuclear device
   - Gravity tractor
@@ -18,16 +21,22 @@
   - Laser ablation
 - Adjust **power levels** and **deflection angles**.
 - Receive **real-time success probability feedback** to optimize strategies.
-- Choose **2D or 3D visualization modes** to watch the mission unfold.
+- Select **2D or 3D visualization modes** to watch the mission unfold.
 - Built with **authentic physics**, featuring:
   - Progressive level system
   - Scoring system
   - Lives counter
-  - Scoreboard showing level, points, successful saves, and remaining attempts.
-- Gamified learning experience helps users understand deflection science.
+  - Scoreboard displaying current level, points, successful saves, and remaining attempts
+- Gamified learning experience that helps users understand planetary defense science.
 
-<img width="1827" height="872" alt="Screenshot 2025-10-04 025637" src="https://github.com/user-attachments/assets/cf641eaf-37b4-4e26-8974-e661d86c9b6b" />
-<img width="1846" height="867" alt="Screenshot 2025-10-04 025701" src="https://github.com/user-attachments/assets/2e063931-2fe9-4e08-8070-e1c73dc61e5c" />
+**Screenshots:**
+
+![Defend Earth Game - Gameplay](https://github.com/user-attachments/assets/cf641eaf-37b4-4e26-8974-e661d86c9b6b)
+*Example of mission setup and gameplay interface.*
+
+![Defend Earth Game - 3D Mode](https://github.com/user-attachments/assets/2e063931-2fe9-4e08-8070-e1c73dc61e5c)
+*3D visualization of an asteroid approaching Earth.*
+
 
 ### 2. Asteroid Simulations 🪐
 - Dynamic **3D Earth visualization** with zoom functionality.
