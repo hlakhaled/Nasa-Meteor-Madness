@@ -11,7 +11,8 @@ import AboutChallenge from "./pages/AboutChallenge";
 // Layout for pages with navbar
 function Layout() {
   return (
-    <div className="min-h-screen bg-black text-white">
+        // <div className="min-h-screen bg-black text-white">
+    <div className="h-screen flex flex-col bg-black text-white">
       <Navbar />
       <Outlet />
     </div>
