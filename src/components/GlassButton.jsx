@@ -28,7 +28,7 @@ const GlassButton = ({ label, to, onClick }) => {
         }}
       />
       {/* Button text */}
-      <span className="relative z-10 text-white font-normal [text-shadow:_0px_5px_9px_rgb(140_88_243_/_0.70)]">
+      <span className="relative z-10 text-white font-normal text-2xl [text-shadow:_0px_5px_9px_rgb(140_88_243_/_0.70)]">
         {label}
       </span>
     </span>

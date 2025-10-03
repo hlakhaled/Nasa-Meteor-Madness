@@ -117,21 +117,7 @@ const asteroidFacts = [
         "Psyche is believed to be the exposed core of a protoplanet. It contains enough iron, nickel, and gold to potentially collapse the world economy if brought to Earth.",
     },
   },
-  {
-    title: "Oumuamua",
-    fact: "The first confirmed interstellar object to pass through our solar system, this cigar-shaped visitor accelerated in ways that can't be explained by gravity alone.",
-    severity: "Rare",
-    image:
-      "https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=800&q=80",
-    details: {
-      date: "Discovered October 19, 2017",
-      location: "Interstellar space",
-      size: "100-1000 meters long",
-      energy: "N/A",
-      additionalInfo:
-        "Oumuamua means 'scout' or 'messenger from the distant past' in Hawaiian. Its unusual acceleration has led to speculation about its true nature, with some scientists suggesting it could be artificial.",
-    },
-  },
+
   {
     title: "Asteroid Bennu",
     fact: "There's a 1 in 2,700 chance this asteroid will hit Earth between 2175 and 2199. NASA collected samples from it in 2020 to better understand its composition.",
@@ -160,6 +146,123 @@ const asteroidFacts = [
       energy: "Kinetic impact",
       additionalInfo:
         "The Double Asteroid Redirection Test (DART) changed Dimorphos' orbital period by 33 minutes, exceeding expectations. This was humanity's first demonstration of planetary defense technology.",
+    },
+  },
+
+  {
+    title: "Oumuamua",
+    fact: "The first confirmed interstellar object to pass through our solar system, this cigar-shaped visitor accelerated in ways that can't be explained by gravity alone.",
+    severity: "Rare",
+    image:
+      "https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=800&q=80",
+    details: {
+      date: "Discovered October 19, 2017",
+      location: "Interstellar space",
+      size: "100-1000 meters long",
+      energy: "N/A",
+      additionalInfo:
+        "Oumuamua means 'scout' or 'messenger from the distant past' in Hawaiian. Its unusual acceleration has led to speculation about its true nature, with some scientists suggesting it could be artificial.",
+    },
+  },
+
+  {
+    title: "Asteroid Ceres",
+    fact: "Ceres, the largest object in the asteroid belt, is classified as a dwarf planet and was the first asteroid visited by NASA's Dawn spacecraft in 2015.",
+    severity: "Stable",
+    image: "https://images-assets.nasa.gov/image/PIA19562/PIA19562~orig.jpg",
+    details: {
+      date: "Visited: 2015-2018",
+      location: "Asteroid Belt (between Mars and Jupiter)",
+      size: "940 km diameter",
+      energy: "N/A",
+      additionalInfo:
+        "Ceres contains water ice and possible subsurface oceans. Bright spots on its surface, particularly in the Occator Crater, are thought to be salt deposits, hinting at geological activity.",
+    },
+  },
+  {
+    title: "Asteroid Ryugu",
+    fact: "Japan's Hayabusa2 mission collected samples from this 1-km asteroid in 2019, revealing a rubble-pile structure and organic materials that may hold clues to the origins of life.",
+    severity: "Scientific Interest",
+    image: "https://images-assets.nasa.gov/image/PIA23231/PIA23231~orig.jpg",
+    details: {
+      date: "Sampled: 2019",
+      location: "Near-Earth orbit",
+      size: "1 km diameter",
+      energy: "N/A",
+      additionalInfo:
+        "Hayabusa2 returned samples to Earth in December 2020. Ryugu's surface is covered with boulders, and its low density suggests it is a loosely bound collection of rocks.",
+    },
+  },
+  {
+    title: "Asteroid Itokawa",
+    fact: "The first asteroid from which samples were returned to Earth by Japan's Hayabusa mission in 2010, Itokawa is a small, rubble-pile asteroid with no atmosphere.",
+    severity: "Scientific Interest",
+    image: "https://images-assets.nasa.gov/image/PIA20003/PIA20003~orig.jpg",
+    details: {
+      date: "Sampled: 2005",
+      location: "Near-Earth orbit",
+      size: "330 meters long",
+      energy: "N/A",
+      additionalInfo:
+        "Itokawa's surface is littered with boulders and lacks fine dust, suggesting a history of impacts. The samples confirmed it is composed of silicate materials similar to meteorites.",
+    },
+  },
+
+  {
+    title: "Asteroid 21 Lutetia",
+    fact: "ESA's Rosetta spacecraft flew by this large asteroid in 2010, revealing a heavily cratered surface and a possible metallic composition.",
+    severity: "Stable",
+    image: "https://images-assets.nasa.gov/image/PIA13570/PIA13570~orig.jpg",
+    details: {
+      date: "July 10, 2010",
+      location: "Asteroid Belt (between Mars and Jupiter)",
+      size: "100 km diameter",
+      energy: "N/A",
+      additionalInfo:
+        "Lutetia is one of the largest asteroids visited by a spacecraft. Its high density suggests it may be a metal-rich M-type asteroid, possibly a remnant of a planetary core.",
+    },
+  },
+  {
+    title: "Asteroid 4 Vesta's Rheasilvia Crater",
+    fact: "The Rheasilvia crater on Vesta, observed by NASA's Dawn mission, is one of the largest impact craters in the solar system, spanning 500 km across.",
+    severity: "Geological Feature",
+    image: "https://images-assets.nasa.gov/image/PIA15678/PIA15678~orig.jpg",
+    details: {
+      date: "Imaged: 2011-2012",
+      location: "Asteroid Belt (between Mars and Jupiter)",
+      size: "Crater: 500 km diameter",
+      energy: "N/A",
+      additionalInfo:
+        "The Rheasilvia impact ejected about 1% of Vesta’s mass into space, creating many Vesta-family asteroids. Its central peak rises 22 km, one of the tallest in the solar system.",
+    },
+  },
+  {
+    title: "Asteroid 4179 Toutatis",
+    fact: "This near-Earth asteroid, imaged by China's Chang'e-2 probe in 2012, has a tumbling rotation and a peanut-like shape due to close planetary encounters.",
+    severity: "Close Call",
+    image: "https://images-assets.nasa.gov/image/PIA17661/PIA17661~orig.jpg",
+    details: {
+      date: "Flyby: December 13, 2012",
+      location: "Near-Earth orbit",
+      size: "3.1 x 1.4 x 2.4 km",
+      energy: "N/A",
+      additionalInfo:
+        "Toutatis passes Earth every four years, with a close approach in 2004 within 1.5 million km. Its complex rotation is caused by gravitational interactions with Earth and Mars.",
+    },
+  },
+  {
+    title: "Asteroid 253 Mathilde",
+    fact: "NASA's NEAR Shoemaker spacecraft flew by Mathilde in 1997, revealing a heavily cratered, low-density C-type asteroid with a slow rotation period.",
+    severity: "Flyby",
+    image:
+      "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/07/Mathilde1_main.jpg?w=768&h=417&fit=crop&crop=faces%2Cfocalpoint",
+    details: {
+      date: "June 27, 1997",
+      location: "Asteroid Belt (between Mars and Jupiter)",
+      size: "53 km diameter",
+      energy: "N/A",
+      additionalInfo:
+        "Mathilde’s large craters, like Karoo (33 km wide), suggest it has absorbed massive impacts without breaking apart. Its low density indicates a porous, rubble-pile structure.",
     },
   },
 ];
@@ -197,7 +300,7 @@ const FunFacts = () => {
         viewport={{ once: true }}
       >
         <h2 className="text-white text-2xl lg:text-3xl font-semibold mb-8 text-center">
-         Asteroid Size Comparison
+          Asteroid Size Comparison
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
           {sizes.map((size, index) => (
