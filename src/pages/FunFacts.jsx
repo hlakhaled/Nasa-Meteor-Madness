@@ -162,6 +162,7 @@ const asteroidFacts = [
         "The Double Asteroid Redirection Test (DART) changed Dimorphos' orbital period by 33 minutes, exceeding expectations. This was humanity's first demonstration of planetary defense technology.",
     },
   },
+  
 ];
 
 // ----------------- Component -----------------
@@ -197,7 +198,7 @@ const FunFacts = () => {
         viewport={{ once: true }}
       >
         <h2 className="text-white text-2xl lg:text-3xl font-semibold mb-8 text-center">
-         Asteroid Size Comparison
+          Asteroid Size Comparison
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
           {sizes.map((size, index) => (
