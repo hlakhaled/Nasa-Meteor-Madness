@@ -806,25 +806,25 @@ export default function DefendEarth() {
         <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
           <Card className={`${showResult.success ? "border-green-500" : "border-red-500"} bg-black/90 text-white max-w-md w-full mx-4`}>
             <CardHeader>
-              <CardTitle className={`text-center text-2xl ${showResult.success ? "text-green-400" : "text-red-400"}`}>
+              <CardTitle className={`text-center text-4xl ${showResult.success ? "text-green-400" : "text-red-400"}`}>
                 {showResult.success ? "MISSION SUCCESS!" : "MISSION FAILED!"}
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 text-center">
-              <p className="text-lg">{showResult.message}</p>
+            <CardContent className="space-y-4 text-center ">
+              <p className="text-xl">{showResult.message}</p>
 
               {showResult.success && (
-                <div className="text-sm text-gray-300">
+                <div className="text-xl text-gray-300">
                   <div>Points Earned: <span className="text-purple-300 font-bold">+{lastPoints}</span></div>
                   <div>Next Level: <span className="text-blue-300 font-bold">{gameState.level}</span></div>
                 </div>
               )}
 
               <div className="flex gap-4 mt-4">
-                <Button onClick={showResult.success ? nextLevel : () => setShowResult(null)} className="flex-1 bg-purple-600 hover:bg-purple-700">
+                <Button onClick={showResult.success ? nextLevel : () => setShowResult(null)} className="flex-1 bg-purple-600 hover:bg-purple-700 text-xl ">
                   {showResult.success ? "Next Level" : "Try Again"}
                 </Button>
-                <Button onClick={() => window.location.reload()} variant="outline" className="flex-1">Main Menu</Button>
+                <Button onClick={() => window.location.reload()} variant="outline" className="flex-1 text-xl">Restart</Button>
               </div>
             </CardContent>
           </Card>
