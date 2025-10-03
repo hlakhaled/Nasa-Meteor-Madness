@@ -71,16 +71,18 @@ function FactCard({ fact, index, onOpen }) {
               <h3 className="text-white font-semibold text-xl mb-3 line-clamp-2">
                 {fact.title}
               </h3>
-              <p className="text-gray-300 text-sm line-clamp-3">{fact.fact}</p>
+              <p className="text-gray-300 font-['Inter'] text-xs line-clamp-3">
+                {fact.fact}
+              </p>
             </div>
 
             <div className="flex items-center justify-between mt-4">
               <div className="text-[#8c58f3] text-sm font-bold">
                 Fact #{index + 1}
               </div>
-              <div className="w-10 h-10 bg-gradient-to-br from-[#8c58f3] to-[#a566ff] rounded-full flex items-center justify-center shadow-lg shadow-[#8c58f3]/50">
+              {/* <div className="w-10 h-10 bg-gradient-to-br from-[#8c58f3] to-[#a566ff] rounded-full flex items-center justify-center shadow-lg shadow-[#8c58f3]/50">
                 <span className="text-xl">💫</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>
@@ -97,40 +99,52 @@ function FactCard({ fact, index, onOpen }) {
           }}
         >
           <div className="space-y-3 overflow-y-auto pr-2 text-left">
-            <h3 className="text-2xl font-bold text-[#a566ff] mb-4 text-center">
+            <h3 className="text-2xl font-bold  mb-4 text-center">
               {fact.title}
             </h3>
 
             {fact.details?.date && (
               <div>
-                <span className="text-[#8c58f3] font-semibold">📅 Date: </span>
-                <span className="text-gray-300">{fact.details.date}</span>
+                <span className="text-[#8c58f3] text-sm  font-bold font-['Inter']">
+                  Date:{" "}
+                </span>
+                <span className="text-gray-300 text-sm font-['Inter']">
+                  {fact.details.date}
+                </span>
               </div>
             )}
             {fact.details?.location && (
               <div>
-                <span className="text-[#8c58f3] font-semibold">
-                  📍 Location:{" "}
+                <span className="text-[#8c58f3] text-sm  font-bold font-['Inter']">
+                  Location:{" "}
                 </span>
-                <span className="text-gray-300">{fact.details.location}</span>
+                <span className="text-gray-300 text-sm font-['Inter']">
+                  {fact.details.location}
+                </span>
               </div>
             )}
             {fact.details?.size && (
               <div>
-                <span className="text-[#8c58f3] font-semibold">📏 Size: </span>
-                <span className="text-gray-300">{fact.details.size}</span>
+                <span className="text-[#8c58f3] text-sm  font-bold font-['Inter']">
+                  Size:{" "}
+                </span>
+                <span className="text-gray-300 text-sm font-['Inter']">
+                  {fact.details.size}
+                </span>
               </div>
             )}
             {fact.details?.energy && (
               <div>
-                <span className="text-[#8c58f3] font-semibold">
-                  ⚡ Energy:{" "}
+                <span className="text-[#8c58f3] text-sm  font-bold font-['Inter']">
+                  Energy:{" "}
                 </span>
-                <span className="text-gray-300">{fact.details.energy}</span>
+                <span className="text-gray-300 text-sm font-['Inter']">
+                  {fact.details.energy}
+                </span>
               </div>
             )}
-            <div className="mt-4 pt-4 border-t border-[#8c58f3]/30">
-              <p className="text-[#a566ff] text-xs italic">
+            <div className="mt-4 pt-4 border-t border-[#8c58f3]/30 ">
+              <p className="text-[#a566ff] text-xs font-['Inter']">
                 Click to explore more details →
               </p>
             </div>

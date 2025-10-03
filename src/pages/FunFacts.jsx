@@ -182,7 +182,7 @@ const FunFacts = () => {
       >
         <Header
           obj={{
-            title: "🌑 Asteroid Fun Facts",
+            title: "🌑 Asteroid Facts",
             description:
               "Discover fascinating stories about cosmic impacts and how we defend Earth from celestial threats.",
           }}
@@ -191,13 +191,13 @@ const FunFacts = () => {
 
       {/* Size Comparison */}
       <motion.div
-        className="bg-gradient-to-br from-[#1a1a1a]/90 to-[#2d1b4e]/90 border border-[#8c58f3]/50 rounded-2xl p-6 sm:p-10 shadow-2xl mb-12 backdrop-blur-sm"
+        className="bg-gradient-to-br from-[#1a1a1a]/90 to-[#2d1b4e]/90 border border-[#8c58f3]/50 rounded-2xl p-6 shadow-2xl mb-12 backdrop-blur-sm"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
         <h2 className="text-white text-2xl lg:text-3xl font-semibold mb-8 text-center">
-          🚀 Asteroid Size Comparison
+         Asteroid Size Comparison
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
           {sizes.map((size, index) => (
@@ -268,7 +268,7 @@ const FunFacts = () => {
         viewport={{ once: true }}
       >
         <GradientCard
-          title="🌍 Want to Test Your Skills?"
+          title="Want to Test Your Skills?"
           desc="Try our asteroid deflection simulator or explore impact scenarios on the world map!"
         />
       </motion.div>

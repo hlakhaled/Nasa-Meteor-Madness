@@ -148,7 +148,7 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
 
           {/* Card container */}
           <div
-            className="relative w-full max-w-4xl h-[80vh] perspective-1000"
+            className="relative w-full max-w-xl h-[80vh] perspective-1000"
             onClick={(e) => e.stopPropagation()}
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
@@ -178,7 +178,7 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                 <div className="h-full overflow-y-auto scrollbar-purple">
                   {/* Image */}
                   {currentFact.image && (
-                    <div className="relative h-[40vh] md:h-[45vh]">
+                    <div className="relative h-[35vh]">
                       <img
                         src={currentFact.image}
                         alt={currentFact.title}
@@ -203,8 +203,8 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                           {currentFact.title}
                         </h2>
-                        <div className="text-[#a566ff] text-sm font-semibold">
-                          Fact #{currentIndex + 1} of {facts.length}
+                        <div className="text-[#a566ff] text-lg font-semibold">
+                          Fact #{currentIndex + 1}
                         </div>
                       </div>
                     </div>
@@ -224,8 +224,8 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                       {currentFact.details.date && (
                         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d1b4e] rounded-lg p-4 border border-[#8c58f3]/30">
                           <div className="flex items-center gap-2 mb-2">
-                            <span className="text-2xl">📅</span>
-                            <span className="text-[#8c58f3] font-semibold">
+                           
+                            <span className="text-[#8c58f3] font-semibold text-xl">
                               Date
                             </span>
                           </div>
@@ -238,8 +238,8 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                       {currentFact.details.location && (
                         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d1b4e] rounded-lg p-4 border border-[#8c58f3]/30">
                           <div className="flex items-center gap-2 mb-2">
-                            <span className="text-2xl">📍</span>
-                            <span className="text-[#8c58f3] font-semibold">
+                         
+                            <span className="text-[#8c58f3] font-semibold text-xl">
                               Location
                             </span>
                           </div>
@@ -252,8 +252,8 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                       {currentFact.details.size && (
                         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d1b4e] rounded-lg p-4 border border-[#8c58f3]/30">
                           <div className="flex items-center gap-2 mb-2">
-                            <span className="text-2xl">📏</span>
-                            <span className="text-[#8c58f3] font-semibold">
+                          
+                            <span className="text-[#8c58f3] font-semibold text-xl">
                               Size
                             </span>
                           </div>
@@ -266,8 +266,8 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                       {currentFact.details.energy && (
                         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d1b4e] rounded-lg p-4 border border-[#8c58f3]/30">
                           <div className="flex items-center gap-2 mb-2">
-                            <span className="text-2xl">⚡</span>
-                            <span className="text-[#8c58f3] font-semibold">
+                           
+                            <span className="text-[#8c58f3] font-semibold text-xl">
                               Energy
                             </span>
                           </div>
@@ -281,7 +281,7 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                     {/* Additional info */}
                     <div className="bg-gradient-to-br from-[#2d1b4e] to-[#1a1a1a] rounded-lg p-5 border-2 border-[#a566ff]/50">
                       <h3 className="text-[#a566ff] font-bold text-lg mb-3 flex items-center gap-2">
-                        <span>💡</span>
+                      
                         Additional Information
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed">
