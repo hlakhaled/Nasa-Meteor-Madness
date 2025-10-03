@@ -12,8 +12,10 @@ import AboutChallenge from "./pages/AboutChallenge";
 function Layout() {
   return (
         // <div className="min-h-screen bg-black text-white">
+        // <div className="min-h-screen flex flex-col bg-black text-white">
     <div className="h-screen flex flex-col bg-black text-white">
       <Navbar />
+       <div className="flex-1 overflow-y-auto"></div>
       <Outlet />
     </div>
   );
