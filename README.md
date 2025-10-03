@@ -1,16 +1,78 @@
-# React + Vite
+# Meteor Madness 🌌☄️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Meteor Madness** is an interactive web platform that simulates asteroid impacts and defense strategies using real NASA NEO API and USGS geological data. It provides an engaging and educational experience where users can explore planetary defense science through games, simulations, and facts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+### 1. Defend Earth Game 🎮
+- Interactive simulation game where users prevent asteroid collisions.
+- Choose from **four real deflection methods**:
+  - Nuclear device
+  - Gravity tractor
+  - Kinetic impactor
+  - Laser ablation
+- Adjust **power levels** and **deflection angles**.
+- Receive **real-time success probability feedback** to optimize strategies.
+- Choose **2D or 3D visualization modes** to watch the mission unfold.
+- Built with **authentic physics**, featuring:
+  - Progressive level system
+  - Scoring system
+  - Lives counter
+  - Scoreboard showing level, points, successful saves, and remaining attempts.
+- Gamified learning experience helps users understand deflection science.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Asteroid Simulations 🪐
+- Dynamic **3D Earth visualization** with zoom functionality.
+- Select any impact location and view:
+  - Precise coordinates
+  - Region names
+  - Continent identification
+- Choose **real NASA-verified asteroids** or **create custom asteroids**:
+  - Define diameter, trajectory, velocity, and composition
+- Physics-based collision simulation calculates:
+  - Crater size
+  - TNT-equivalent energy
+  - Seismic magnitude
+  - Tsunami predictions for coastal impacts
+- Differentiates between **continental** and **coastal impacts** for secondary effects prediction.
+- Uses **real orbital mechanics, impact energy formulas, and USGS topographical & seismic data** to make complex physics accessible.
 
-## Expanding the ESLint configuration
+### 3. Facts 📚
+- Interactive cards delivering educational content on:
+  - Asteroid fundamentals
+  - Historical impacts
+  - Astronomical phenomena
+  - Defense strategies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Benefits & Impact
+- Makes **planetary defense science accessible** to all users.
+- Provides a **hands-on learning experience** through simulation and gamification.
+- Helps users understand **how physical parameters affect asteroid deflection**.
+- Educates on **astronomical phenomena** and **global impact consequences**.
+
+---
+
+## Technologies Used
+- React.js (Vite)
+- Three.js / React Three Fiber (3D visualizations)
+- NASA NEO API & USGS data
+- Tailwind CSS (UI)
+- GitHub Pages (Deployment)
+
+---
+
+## Live Demo
+Check out the live project here: [Meteor Madness](https://hlakhaled.github.io/Nasa-Meteor-Madness/)
+
+---
+
+## Installation (for local development)
+```bash
+git clone https://github.com/<your-username>/Nasa-Meteor-Madness.git
+cd Nasa-Meteor-Madness
+npm install
+npm run dev
