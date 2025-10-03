@@ -6,7 +6,6 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
   const [diameter, setDiameter] = useState(100);
   const [velocity, setVelocity] = useState(15);
 
-  // NASA asteroids with real data and risk assessments
   const asteroids = [
     {
       id: 1,
@@ -16,7 +15,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
       energy: "1,200 MT",
       risk: "MEDIUM",
       torino: 0,
-      description: "Close approach in 2029"
+      description: "Close approach in 2029",
     },
     {
       id: 2,
@@ -26,7 +25,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
       energy: "1,450 MT",
       risk: "MEDIUM",
       torino: 1,
-      description: "1/2700 chance impact 2182"
+      description: "1/2700 chance impact 2182",
     },
     {
       id: 3,
@@ -36,7 +35,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
       energy: "8,500 MT",
       risk: "LOW",
       torino: 0,
-      description: "No known threat"
+      description: "No known threat",
     },
     {
       id: 4,
@@ -46,7 +45,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
       energy: "1,500,000 MT",
       risk: "HIGH",
       torino: 1,
-      description: "Extinction-level if impact"
+      description: "Extinction-level if impact",
     },
     {
       id: 5,
@@ -56,7 +55,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
       energy: "980 MT",
       risk: "LOW",
       torino: 0,
-      description: "Safe orbit"
+      description: "Safe orbit",
     },
     {
       id: 6,
@@ -66,7 +65,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
       energy: "85,000 MT",
       risk: "MEDIUM",
       torino: 0,
-      description: "Chaotic rotation"
+      description: "Chaotic rotation",
     },
     {
       id: 7,
@@ -76,7 +75,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
       energy: "95,000 MT",
       risk: "HIGH",
       torino: 0,
-      description: "High velocity crosser"
+      description: "High velocity crosser",
     },
     {
       id: 8,
@@ -86,16 +85,20 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
       energy: "12,500 MT",
       risk: "MEDIUM",
       torino: 0,
-      description: "Earth-crossing orbit"
+      description: "Earth-crossing orbit",
     },
   ];
 
   const getRiskColor = (risk) => {
-    switch(risk) {
-      case "LOW": return { bg: "#10b981", border: "#34d399", text: "#d1fae5" };
-      case "MEDIUM": return { bg: "#f59e0b", border: "#fbbf24", text: "#fef3c7" };
-      case "HIGH": return { bg: "#ef4444", border: "#f87171", text: "#fee2e2" };
-      default: return { bg: "#6b7280", border: "#9ca3af", text: "#f3f4f6" };
+    switch (risk) {
+      case "LOW":
+        return { bg: "#10b981", border: "#34d399", text: "#d1fae5" };
+      case "MEDIUM":
+        return { bg: "#f59e0b", border: "#fbbf24", text: "#fef3c7" };
+      case "HIGH":
+        return { bg: "#ef4444", border: "#f87171", text: "#fee2e2" };
+      default:
+        return { bg: "#6b7280", border: "#9ca3af", text: "#f3f4f6" };
     }
   };
 
@@ -166,32 +169,39 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
           Impact Simulator
         </h2>
         <p
-  className="inter-text"
-  style={{
-    fontSize: "clamp(14px, 1.2vw, 16px)",
-    fontWeight: "bold",
-    color: selectedTarget ? "#ef4444" : "#999",
-    marginTop: "8px",
-    display: "flex",
-    alignItems: "center",
-    gap: "6px",
-    animation: selectedTarget ? "blink 1.5s ease-in-out infinite" : "none"
-  }}
->
-  {selectedTarget ? (
-    <>
-      <img
-        src={TargetIcon}
-        alt="target"
-        style={{ color:"#ef4444", width: "18px", height: "18px", filter: "invert(17%) sepia(96%) saturate(7493%) hue-rotate(0deg) brightness(96%) contrast(107%)" }}
-      />
-      {`Target: ${selectedTarget.region} (${selectedTarget.lat}°, ${selectedTarget.lon}°)`}
-    </>
-  ) : (
-    "Click on Earth to select a region"
-  )}
-</p>
-
+          className="inter-text"
+          style={{
+            fontSize: "clamp(14px, 1.2vw, 16px)",
+            fontWeight: "bold",
+            color: selectedTarget ? "#ef4444" : "#999",
+            marginTop: "8px",
+            display: "flex",
+            alignItems: "center",
+            gap: "6px",
+            animation: selectedTarget
+              ? "blink 1.5s ease-in-out infinite"
+              : "none",
+          }}
+        >
+          {selectedTarget ? (
+            <>
+              <img
+                src={TargetIcon}
+                alt="target"
+                style={{
+                  color: "#ef4444",
+                  width: "18px",
+                  height: "18px",
+                  filter:
+                    "invert(17%) sepia(96%) saturate(7493%) hue-rotate(0deg) brightness(96%) contrast(107%)",
+                }}
+              />
+              {`Target: ${selectedTarget.region} (${selectedTarget.lat}°, ${selectedTarget.lon}°)`}
+            </>
+          ) : (
+            "Click on Earth to select a region"
+          )}
+        </p>
 
         <div
           className="inter-text"
@@ -227,6 +237,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
       </div>
 
       <div
+        className="scrollbar-purple"
         style={{
           flex: 1,
           overflowY: "auto",
@@ -252,7 +263,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
                   transition: "all 0.3s",
                   cursor: selectedTarget ? "pointer" : "not-allowed",
                   opacity: selectedTarget ? 1 : 0.5,
-                  position: "relative"
+                  position: "relative",
                 }}
                 onMouseEnter={(e) => {
                   if (selectedTarget) {
@@ -268,7 +279,14 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
                   e.currentTarget.style.boxShadow = "none";
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    marginBottom: "8px",
+                  }}
+                >
                   <h3
                     className="inter-text"
                     style={{
@@ -276,7 +294,7 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
                       fontWeight: "600",
                       margin: 0,
                       color: "#fff",
-                      flex: 1
+                      flex: 1,
                     }}
                   >
                     {asteroid.name}
@@ -292,18 +310,21 @@ const AsteroidPanel = ({ onAsteroidSelect, selectedTarget }) => {
                       border: `1px solid ${riskColors.border}`,
                       color: riskColors.text,
                       marginLeft: "8px",
-                      whiteSpace: "nowrap"
+                      whiteSpace: "nowrap",
                     }}
                   >
                     {asteroid.risk} RISK
                   </span>
                 </div>
-                <p className="inter-text" style={{
-                  fontSize: "clamp(9px, 1vw, 11px)",
-                  color: "#888",
-                  margin: "0 0 10px 0",
-                  fontStyle: "italic"
-                }}>
+                <p
+                  className="inter-text"
+                  style={{
+                    fontSize: "clamp(9px, 1vw, 11px)",
+                    color: "#888",
+                    margin: "0 0 10px 0",
+                    fontStyle: "italic",
+                  }}
+                >
                   {asteroid.description}
                 </p>
                 <div
