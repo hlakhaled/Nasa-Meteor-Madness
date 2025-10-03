@@ -806,7 +806,7 @@ export default function DefendEarth() {
         <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
           <Card className={`${showResult.success ? "border-green-500" : "border-red-500"} bg-black/90 text-white max-w-md w-full mx-4`}>
             <CardHeader>
-              <CardTitle className={`text-center text-4xl ${showResult.success ? "text-green-400" : "text-red-400"}`}>
+              <CardTitle className={`text-center text-xl ${showResult.success ? "text-green-400" : "text-red-400"}`}>
                 {showResult.success ? "MISSION SUCCESS!" : "MISSION FAILED!"}
               </CardTitle>
             </CardHeader>
