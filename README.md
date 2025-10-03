@@ -2,7 +2,7 @@
 
 **Meteor Madness** is an interactive web platform that simulates asteroid impacts and defense strategies using real NASA NEO API and USGS geological data. It offers an engaging and educational experience where users can explore planetary defense science through interactive games, 3D simulations, and informative content.
 
-**Live Website:** [Explore Meteor Madness](https://hlakhaled.github.io/Nasa-Meteor-Madness/#/)
+**Live Website:** [Meteor Madness](https://hlakhaled.github.io/Nasa-Meteor-Madness/#/)
 ![Meteor Madness Screenshot](https://github.com/user-attachments/assets/d3b40c5c-8e19-41e7-a594-c91a04df52a6)
 
 ---
@@ -25,6 +25,9 @@
   - Lives counter
   - Scoreboard showing level, points, successful saves, and remaining attempts.
 - Gamified learning experience helps users understand deflection science.
+
+<img width="1827" height="872" alt="Screenshot 2025-10-04 025637" src="https://github.com/user-attachments/assets/cf641eaf-37b4-4e26-8974-e661d86c9b6b" />
+<img width="1846" height="867" alt="Screenshot 2025-10-04 025701" src="https://github.com/user-attachments/assets/2e063931-2fe9-4e08-8070-e1c73dc61e5c" />
 
 ### 2. Asteroid Simulations 🪐
 - Dynamic **3D Earth visualization** with zoom functionality.
