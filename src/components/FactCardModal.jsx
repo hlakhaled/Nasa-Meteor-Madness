@@ -175,7 +175,7 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                   boxShadow: "0 0 60px rgba(140, 88, 243, 0.6)",
                 }}
               >
-                <div className="h-full overflow-y-auto">
+                <div className="h-full overflow-y-auto scrollbar-purple">
                   {/* Image */}
                   {currentFact.image && (
                     <div className="relative h-[40vh] md:h-[45vh]">
@@ -189,7 +189,11 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                       {/* Severity */}
                       <div
                         className="absolute top-6 right-6 px-4 py-2 rounded-full font-bold text-white text-sm backdrop-blur-sm"
-                        style={{ backgroundColor: getSeverityColor(currentFact.severity) }}
+                        style={{
+                          backgroundColor: getSeverityColor(
+                            currentFact.severity
+                          ),
+                        }}
                       >
                         {currentFact.severity}
                       </div>
@@ -221,9 +225,13 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d1b4e] rounded-lg p-4 border border-[#8c58f3]/30">
                           <div className="flex items-center gap-2 mb-2">
                             <span className="text-2xl">📅</span>
-                            <span className="text-[#8c58f3] font-semibold">Date</span>
+                            <span className="text-[#8c58f3] font-semibold">
+                              Date
+                            </span>
                           </div>
-                          <p className="text-gray-300 text-sm">{currentFact.details.date}</p>
+                          <p className="text-gray-300 text-sm">
+                            {currentFact.details.date}
+                          </p>
                         </div>
                       )}
 
@@ -231,9 +239,13 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d1b4e] rounded-lg p-4 border border-[#8c58f3]/30">
                           <div className="flex items-center gap-2 mb-2">
                             <span className="text-2xl">📍</span>
-                            <span className="text-[#8c58f3] font-semibold">Location</span>
+                            <span className="text-[#8c58f3] font-semibold">
+                              Location
+                            </span>
                           </div>
-                          <p className="text-gray-300 text-sm">{currentFact.details.location}</p>
+                          <p className="text-gray-300 text-sm">
+                            {currentFact.details.location}
+                          </p>
                         </div>
                       )}
 
@@ -241,9 +253,13 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d1b4e] rounded-lg p-4 border border-[#8c58f3]/30">
                           <div className="flex items-center gap-2 mb-2">
                             <span className="text-2xl">📏</span>
-                            <span className="text-[#8c58f3] font-semibold">Size</span>
+                            <span className="text-[#8c58f3] font-semibold">
+                              Size
+                            </span>
                           </div>
-                          <p className="text-gray-300 text-sm">{currentFact.details.size}</p>
+                          <p className="text-gray-300 text-sm">
+                            {currentFact.details.size}
+                          </p>
                         </div>
                       )}
 
@@ -251,9 +267,13 @@ export function FactCardModal({ facts, initialIndex, isOpen, onClose }) {
                         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d1b4e] rounded-lg p-4 border border-[#8c58f3]/30">
                           <div className="flex items-center gap-2 mb-2">
                             <span className="text-2xl">⚡</span>
-                            <span className="text-[#8c58f3] font-semibold">Energy</span>
+                            <span className="text-[#8c58f3] font-semibold">
+                              Energy
+                            </span>
                           </div>
-                          <p className="text-gray-300 text-sm">{currentFact.details.energy}</p>
+                          <p className="text-gray-300 text-sm">
+                            {currentFact.details.energy}
+                          </p>
                         </div>
                       )}
                     </div>
