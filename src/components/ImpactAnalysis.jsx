@@ -56,7 +56,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
     if (diameter < 50) {
       if (isOcean) {
         return [
-          `🌊 Ocean impact at ${target.region}`,
+          `♒︎ Ocean impact at ${target.region}`,
           `Crater: ${(craterDiameter / 1000).toFixed(
             1
           )} km diameter (mostly underwater)`,
@@ -77,7 +77,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
         ];
       } else {
         return [
-          `🏔️ Land impact at ${target.region}`,
+          `ᨒ Land impact at ${target.region}`,
           `Crater: ${(craterDiameter / 1000).toFixed(2)} km diameter, ${(
             craterDiameter /
             1000 /
@@ -104,7 +104,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
         const tsunamiHeight = Math.min(100, diameter * 0.15);
         const tsunamiRange = Math.sqrt(energy) * 15;
         return [
-          `🌊 Major ocean impact at ${target.region}`,
+          `♒︎ Major ocean impact at ${target.region}`,
           `Underwater crater: ${(craterDiameter / 1000).toFixed(
             1
           )} km diameter`,
@@ -132,7 +132,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
         ];
       } else {
         return [
-          `🏔️ Regional land impact at ${target.region}`,
+          `ᨒ Regional land impact at ${target.region}`,
           `Crater: ${(craterDiameter / 1000).toFixed(1)} km diameter, ${(
             craterDiameter /
             1000 /
@@ -167,7 +167,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
       if (isOcean) {
         const tsunamiHeight = Math.min(1000, diameter * 0.3);
         return [
-          `🌊 Catastrophic ocean impact at ${target.region}`,
+          `♒︎ Catastrophic ocean impact at ${target.region}`,
           `Massive crater: ${(craterDiameter / 1000).toFixed(
             0
           )} km diameter underwater`,
@@ -194,7 +194,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
         ];
       } else {
         return [
-          `🏔️ Continental extinction event at ${target.region}`,
+          `ᨒ Continental extinction event at ${target.region}`,
           `Impact crater: ${(craterDiameter / 1000).toFixed(
             0
           )} km diameter, visible from orbit`,
@@ -228,7 +228,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
     } else {
       if (isOcean) {
         return [
-          `🌊 Planetary-scale ocean impact at ${target.region}`,
+          `♒︎ Planetary-scale ocean impact at ${target.region}`,
           `Impact crater: ${(craterDiameter / 1000).toFixed(
             0
           )} km - penetrates ocean floor to mantle`,
@@ -255,7 +255,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
         ];
       } else {
         return [
-          `🏔️ Planet-killer impact at ${target.region}`,
+          `ᨒ Planet-killer impact at ${target.region}`,
           `Crater: ${(craterDiameter / 1000).toFixed(
             0
           )} km diameter - reshapes continental geology`,
@@ -336,7 +336,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
           >
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
               <div style={{ fontSize: "clamp(18px, 2.5vw, 22px)" }}>
-                {isOcean ? "🌊" : "💥"}
+                {isOcean ? "♒︎" : "ᨒ"}
               </div>
               <div>
                 <h2
@@ -566,7 +566,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
                 position: "relative",
               }}
             >
-              ⚠️ {devastation.level} DEVASTATION
+              ⚠ {devastation.level} DEVASTATION
             </h3>
 
             <div
@@ -607,23 +607,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
                       filter: "grayscale(0%)",
                     }}
                   >
-                    {effect.includes("🌊") || effect.includes("🏔️")
-                      ? ""
-                      : index === 0
-                      ? "🎯"
-                      : index === 1
-                      ? "💀"
-                      : index === 2
-                      ? "🔥"
-                      : index === 3
-                      ? "⚡"
-                      : index === 4
-                      ? "💥"
-                      : index === 5
-                      ? "☁️"
-                      : index === 6
-                      ? "🌡️"
-                      : "☠️"}
+                    {effect.includes("♒︎") || effect.includes("ᨒ")}
                   </span>
                   <span
                     className="inter-text"
@@ -639,7 +623,7 @@ const ImpactAnalysis = ({ target, asteroid, onClose }) => {
                           : "400",
                     }}
                   >
-                    {effect.replace(/^(🌊|🏔️)\s/, "")}
+                    {effect.replace(/^(♒︎|ᨒ)\s/, "")}
                   </span>
                 </div>
               ))}
