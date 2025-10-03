@@ -68,7 +68,7 @@ const AsteroidSimulation = () => {
     >
       {/* Explosion sound */}
       <audio ref={explosionSoundRef}>
-        <source src="/explosion.mp3" type="audio/mpeg" />
+        <source src="/Nasa-Meteor-Madness/explosion.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Left Side */}
@@ -111,7 +111,7 @@ const AsteroidSimulation = () => {
             {showFalling && selectedTarget && selectedAsteroid && (
               <AsteroidFall
                 targetPosition={selectedTarget.position}
-                spawnFromTarget={true}   // 👈 tell asteroid to spawn from direction of target
+                spawnFromTarget={true} // 👈 tell asteroid to spawn from direction of target
                 onComplete={handleFallComplete}
                 asteroidSize={getAsteroidSize(selectedAsteroid.diameter)}
               />

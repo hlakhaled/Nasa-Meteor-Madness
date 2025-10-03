@@ -1,10 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Outlet,
-} from "react-router-dom";
+import React, { useRef } from "react";
+import { HashRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 
 import ExplorePage from "./pages/ExplorePage";
 import Navbar from "./components/Navbar";
@@ -18,7 +13,7 @@ function Layout() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
-      <Outlet /> {/* child routes appear here */}
+      <Outlet />
     </div>
   );
 }
@@ -26,21 +21,24 @@ function Layout() {
 function App() {
   const bgAudioRef = useRef(null);
   const clickAudioRef = useRef(null);
+  const hasStartedBg = useRef(false); // track if music started
 
-  useEffect(() => {
-    if (bgAudioRef.current) {
-      bgAudioRef.current.volume = 0.3; // lower background music volume
+  const handleInteraction = () => {
+    // Start background music on first user interaction
+    if (bgAudioRef.current && !hasStartedBg.current) {
+      bgAudioRef.current.volume = 0.3;
+      bgAudioRef.current.loop = true;
       bgAudioRef.current.play().catch(() => {
-        console.log("Autoplay blocked — waiting for interaction");
+        console.log("Failed to play background music");
       });
+      hasStartedBg.current = true;
     }
-  }, []);
 
-  const handleClick = () => {
+    // Play click sound
     if (clickAudioRef.current) {
-      clickAudioRef.current.volume = 0.6; // lower click sound
-      clickAudioRef.current.currentTime = 0; // restart if already playing
-      clickAudioRef.current.playbackRate = 1.75; // faster click
+      clickAudioRef.current.volume = 0.6;
+      clickAudioRef.current.currentTime = 0;
+      clickAudioRef.current.playbackRate = 1.75;
       clickAudioRef.current.play().catch(() => {});
     }
   };
@@ -48,28 +46,22 @@ function App() {
   return (
     <Router>
       {/* Background music */}
-      <audio ref={bgAudioRef} loop autoPlay>
-        <source src="/music/Sakta.mp3" type="audio/mpeg" />
+      <audio ref={bgAudioRef}>
+        <source src="/Nasa-Meteor-Madness/music/Sakta.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Click sound */}
       <audio ref={clickAudioRef}>
-        <source src="/click.mp3" type="audio/mpeg" />
+        <source src="/Nasa-Meteor-Madness/click.mp3" type="audio/mpeg" />
       </audio>
 
-      {/* Global click sound trigger */}
-      <div onClick={handleClick}>
+      {/* Global listener for any interaction */}
+      <div onClick={handleInteraction} onKeyDown={handleInteraction} onTouchStart={handleInteraction}>
         <Routes>
-          {/* Landing page */}
           <Route path="/" element={<ExplorePage />} />
-
-          {/* Pages with navbar */}
           <Route element={<Layout />}>
             <Route path="defend-earth" element={<DefendEarth />} />
-            <Route
-              path="asteroid-simulation"
-              element={<AsteroidSimulation />}
-            />
+            <Route path="asteroid-simulation" element={<AsteroidSimulation />} />
             <Route path="fun-facts" element={<FunFacts />} />
             <Route path="about-challenge" element={<AboutChallenge />} />
           </Route>

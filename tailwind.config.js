@@ -22,9 +22,10 @@ export default {
       animation: {
         swing: "swing 2s ease-in-out infinite",
         float: "float 3s ease-in-out infinite",
-        "swing-float": "swing 2s ease-in-out infinite, float 3s ease-in-out infinite",
+        "swing-float":
+          "swing 2s ease-in-out infinite, float 3s ease-in-out infinite",
       },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [],
 };
