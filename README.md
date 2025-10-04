@@ -30,7 +30,7 @@
 
 <hr style="border:0.5px solid #ccc;" />
 
-### 2. Asteroid Simulations 🪐
+### 2. Asteroid Simulations
 
 **Asteroid Simulations** lets users explore asteroid impacts on Earth with dynamic 3D physics-based visualizations.
 
