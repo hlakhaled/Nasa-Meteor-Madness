@@ -5,7 +5,6 @@
 **Live Website:** [Meteor Madness](https://hlakhaled.github.io/Nasa-Meteor-Madness/#/)
 ![Meteor Madness Screenshot](https://github.com/user-attachments/assets/d3b40c5c-8e19-41e7-a594-c91a04df52a6)
 
-<hr style="border:0.5px solid #ccc;" />
 
 ## Features
 
@@ -28,7 +27,7 @@
 ![3D Visualization](https://github.com/user-attachments/assets/2e063931-2fe9-4e08-8070-e1c73dc61e5c)
 *2D visualization of an asteroid approaching Earth during the simulation.*
 
-<hr style="border:0.5px solid #ccc;" />
+## 
 
 ### 2. Asteroid Simulations
 
@@ -45,7 +44,7 @@
 ![Asteroid Simulation - 3D Impact](https://github.com/user-attachments/assets/7f56361f-ff68-4b1e-9fb5-bac953393563)
 *3D simulation showing asteroid impact location, trajectory, and analysis.*
 
-<hr style="border:0.5px solid #ccc;" />
+## 
 
 ### 3. Facts 
 
@@ -63,7 +62,7 @@
 ![Asteroid Facts 1](https://github.com/user-attachments/assets/e7d3992e-0f69-4a9e-a6d8-5473759c431e)
 *Interactive cards presenting asteroid information.*
 
-<hr style="border:0.5px solid #ccc;" />
+## 
 
 ### 4. About Challenge 
 
@@ -77,7 +76,7 @@
 ![About Challenge](https://github.com/user-attachments/assets/3fe45af6-3407-4cf1-bb56-61022cf1469d)
 *Overview of the challenge and learning objectives.*
 
-<hr style="border:0.5px solid #ccc;" />
+## 
 
 ## Technologies Used
 - React.js (Vite)
