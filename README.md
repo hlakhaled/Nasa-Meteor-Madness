@@ -9,33 +9,25 @@
 
 ## Features
 
-### 1. Defend Earth Game 🎮
+### 1. Defend Earth Game 
 
-**Defend Earth** is an interactive simulation game where users prevent asteroid collisions with Earth. Players engage in strategic decision-making using real physics-based planetary defense methods.
+**Defend Earth** is an interactive game where players prevent asteroid collisions using real physics-based strategies. It combines fun gameplay with educational insights into planetary defense.
 
-**Key Features:**
-- Choose from **four real deflection methods**:
-  - Nuclear device
-  - Gravity tractor
-  - Kinetic impactor
-  - Laser ablation
-- Adjust **power levels** and **deflection angles**.
-- Receive **real-time success probability feedback** to optimize strategies.
-- Select **2D or 3D visualization modes** to watch the mission unfold.
-- Built with **authentic physics**, featuring:
-  - Progressive level system
-  - Scoring system
-  - Lives counter
-  - Scoreboard displaying current level, points, successful saves, and remaining attempts
-- Gamified learning experience that helps users understand planetary defense science.
+**Highlights:**
+- Select from **four deflection methods**: Nuclear, Gravity Tractor, Kinetic Impactor, Laser Ablation
+- Adjust **power levels** and **angles** to optimize success
+- **Real-time feedback** on mission probability
+- Choose **2D or 3D visualizations** to watch missions unfold
+- Features **levels, scoring, lives, and a scoreboard** for a gamified learning experience
 
 **Screenshots:**
 
-![Defend Earth Game - Gameplay](https://github.com/user-attachments/assets/cf641eaf-37b4-4e26-8974-e661d86c9b6b)
-*Example of mission setup and gameplay interface.*
+![Gameplay Interface](https://github.com/user-attachments/assets/cf641eaf-37b4-4e26-8974-e661d86c9b6b)
+*Interactive setup and gameplay, showing how players plan asteroid deflection missions.*
 
-![Defend Earth Game - 3D Mode](https://github.com/user-attachments/assets/2e063931-2fe9-4e08-8070-e1c73dc61e5c)
-*3D visualization of an asteroid approaching Earth.*
+![3D Visualization](https://github.com/user-attachments/assets/2e063931-2fe9-4e08-8070-e1c73dc61e5c)
+*2D visualization of an asteroid approaching Earth during the simulation.*
+
 
 
 ### 2. Asteroid Simulations 🪐
