@@ -57,19 +57,25 @@
 - Astronomical phenomena
 - Planetary defense strategies
 
-![Asteroid Facts 1](https://github.com/user-attachments/assets/e7d3992e-0f69-4a9e-a6d8-5473759c431e)
-*Interactive cards presenting asteroid information.*
-
 ![Asteroid Facts 2](https://github.com/user-attachments/assets/d73b9b6c-3114-4d18-8409-ad1eed1195fb)
 *Additional interactive content on space science and defense strategies.*
 
+![Asteroid Facts 1](https://github.com/user-attachments/assets/e7d3992e-0f69-4a9e-a6d8-5473759c431e)
+*Interactive cards presenting asteroid information.*
+
 ---
 
-## Benefits & Impact
-- Makes **planetary defense science accessible** to all users.
+### 4. About Challenge 
+
+**About Challenge** highlights the educational goals of Meteor Madness, making planetary defense science accessible and engaging.
+
+**Key Points:**
 - Provides a **hands-on learning experience** through simulation and gamification.
 - Helps users understand **how physical parameters affect asteroid deflection**.
 - Educates on **astronomical phenomena** and **global impact consequences**.
+
+![About Challenge](https://github.com/user-attachments/assets/3fe45af6-3407-4cf1-bb56-61022cf1469d)
+*Overview of the challenge and learning objectives.*
 
 ---
 
