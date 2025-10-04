@@ -28,30 +28,40 @@
 ![3D Visualization](https://github.com/user-attachments/assets/2e063931-2fe9-4e08-8070-e1c73dc61e5c)
 *2D visualization of an asteroid approaching Earth during the simulation.*
 
-
+---
 
 ### 2. Asteroid Simulations 🪐
-- Dynamic **3D Earth visualization** with zoom functionality.
-- Select any impact location and view:
-  - Precise coordinates
-  - Region names
-  - Continent identification
-- Choose **real NASA-verified asteroids** or **create custom asteroids**:
-  - Define diameter, trajectory, velocity, and composition
-- Physics-based collision simulation calculates:
-  - Crater size
-  - TNT-equivalent energy
-  - Seismic magnitude
-  - Tsunami predictions for coastal impacts
-- Differentiates between **continental** and **coastal impacts** for secondary effects prediction.
-- Uses **real orbital mechanics, impact energy formulas, and USGS topographical & seismic data** to make complex physics accessible.
 
-### 3. Facts 📚
-- Interactive cards delivering educational content on:
-  - Asteroid fundamentals
-  - Historical impacts
-  - Astronomical phenomena
-  - Defense strategies
+**Asteroid Simulations** lets users explore asteroid impacts on Earth with dynamic 3D physics-based visualizations.
+
+**Highlights:**
+- Interactive **3D Earth model** with zoom.
+- View **coordinates, region, and continent** for any impact location.
+- Choose **NASA-verified asteroids** or **custom asteroids** (set diameter, trajectory, velocity, composition).
+- Simulations calculate **crater size, impact energy, seismic magnitude, and tsunami risk**.
+- Distinguishes **continental vs. coastal impacts** for accurate secondary effect predictions.
+- Uses **real physics, orbital mechanics, and USGS data** to simplify complex calculations.
+
+![Asteroid Simulation - 3D Impact](https://github.com/user-attachments/assets/7f56361f-ff68-4b1e-9fb5-bac953393563)
+*3D simulation showing asteroid impact location, trajectory, and analysis.*
+
+---
+
+### 3. Facts 
+
+**Facts** delivers interactive educational content about asteroids and space science through engaging cards.
+
+**Highlights:**
+- Asteroid fundamentals
+- Historical asteroid impacts
+- Astronomical phenomena
+- Planetary defense strategies
+
+![Asteroid Facts 1](https://github.com/user-attachments/assets/e7d3992e-0f69-4a9e-a6d8-5473759c431e)
+*Interactive cards presenting asteroid information.*
+
+![Asteroid Facts 2](https://github.com/user-attachments/assets/d73b9b6c-3114-4d18-8409-ad1eed1195fb)
+*Additional interactive content on space science and defense strategies.*
 
 ---
 
