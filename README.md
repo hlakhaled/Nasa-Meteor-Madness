@@ -4,7 +4,7 @@
 
 **Live Website:** [Meteor Madness](https://hlakhaled.github.io/Nasa-Meteor-Madness/#/)
 
-![Meteor Madness Screenshot](https://github.com/user-attachments/assets/d3b40c5c-8e19-41e7-a594-c91a04df52a6)
+![ezgif-3faa66dbdbc730](https://github.com/user-attachments/assets/2544dd9e-e9d0-4605-b053-62a6d2a8182d)
 
 
 
@@ -21,15 +21,12 @@
 - Choose **2D or 3D visualizations** to watch missions unfold
 - Features **levels, scoring, lives, and a scoreboard** for a gamified learning experience
 
-**Screenshots:**
+![ezgif-788a65dd8b7325](https://github.com/user-attachments/assets/4cc0a5cf-3a53-4f2b-8aef-374dc1a0924f)
 
-![Gameplay Interface](https://github.com/user-attachments/assets/cf641eaf-37b4-4e26-8974-e661d86c9b6b)
-*Interactive setup and gameplay, showing how players plan asteroid deflection missions.*
+![ezgif-75efee321f9f86](https://github.com/user-attachments/assets/b1300310-b1ee-4d15-b5a3-8666b5a623be)
 
-![3D Visualization](https://github.com/user-attachments/assets/2e063931-2fe9-4e08-8070-e1c73dc61e5c)
-*2D visualization of an asteroid approaching Earth during the simulation.*
+##
 
-## 
 
 ### 2. Asteroid Simulations
 
@@ -43,8 +40,8 @@
 - Distinguishes **continental vs. coastal impacts** for accurate secondary effect predictions.
 - Uses **real physics, orbital mechanics, and USGS data** to simplify complex calculations.
 
-![Asteroid Simulation - 3D Impact](https://github.com/user-attachments/assets/7f56361f-ff68-4b1e-9fb5-bac953393563)
-*3D simulation showing asteroid impact location, trajectory, and analysis.*
+![ezgif-85a8b07b7df324](https://github.com/user-attachments/assets/3a27b045-c693-4b37-8e95-37afa8ab6000)
+
 
 ## 
 
@@ -58,11 +55,7 @@
 - Astronomical phenomena
 - Planetary defense strategies
 
-![Asteroid Facts 2](https://github.com/user-attachments/assets/d73b9b6c-3114-4d18-8409-ad1eed1195fb)
-*Additional interactive content on space science and defense strategies.*
-
-![Asteroid Facts 1](https://github.com/user-attachments/assets/e7d3992e-0f69-4a9e-a6d8-5473759c431e)
-*Interactive cards presenting asteroid information.*
+![ezgif-8b8c965e3aea9c](https://github.com/user-attachments/assets/86421683-2b8b-4a4b-beb2-a7606b465f81)
 
 ## 
 
@@ -75,8 +68,7 @@
 - Helps users understand **how physical parameters affect asteroid deflection**.
 - Educates on **astronomical phenomena** and **global impact consequences**.
 
-![About Challenge](https://github.com/user-attachments/assets/3fe45af6-3407-4cf1-bb56-61022cf1469d)
-*Overview of the challenge and learning objectives.*
+![Recording 2025-10-04 093426](https://github.com/user-attachments/assets/18c269dc-ca65-4e46-a900-cae1470e2313)
 
 ## 
 
