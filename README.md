@@ -86,16 +86,4 @@
 - Tailwind CSS (UI)
 - GitHub Pages (Deployment)
 
----
 
-## Live Demo
-Check out the live project here: [Meteor Madness](https://hlakhaled.github.io/Nasa-Meteor-Madness/)
-
----
-
-## Installation (for local development)
-```bash
-git clone https://github.com/<your-username>/Nasa-Meteor-Madness.git
-cd Nasa-Meteor-Madness
-npm install
-npm run dev
