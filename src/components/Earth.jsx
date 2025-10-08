@@ -7,13 +7,20 @@ Source: https://sketchfab.com/3d-models/earth-f7a76c63ff1846afb2d606e5c8369c15
 Title: Earth
 */
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 
 function Earth({ onTargetSelect, selectedTarget }) {
   // const { nodes, materials } = useGLTF("/earth.gltf");
   const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}models/earth/earth.gltf`);
   const meshRef = useRef();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.dispatchEvent(new Event('earthLoaded'));
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleClick = (event) => {
     event.stopPropagation();

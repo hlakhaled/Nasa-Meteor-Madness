@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useRef } from "react";
+import React, { Suspense, useState, useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Earth from "../components/Earth";
@@ -6,12 +6,26 @@ import Starfield from "../components/Starfield";
 import AsteroidPanel from "../components/AsteroidPanel";
 import ImpactAnalysis from "../components/ImpactAnalysis";
 import AsteroidFall from "../components/AsteroidFall";
+import SpaceLoader from "../components/SpaceLoader";
 
 const AsteroidSimulation = () => {
   const [selectedTarget, setSelectedTarget] = useState(null);
   const [selectedAsteroid, setSelectedAsteroid] = useState(null);
   const [showFalling, setShowFalling] = useState(false);
   const [showAnalysis, setShowAnalysis] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleEarthLoaded = () => {
+      setIsLoading(false);
+    };
+    
+    window.addEventListener('earthLoaded', handleEarthLoaded);
+    
+    return () => {
+      window.removeEventListener('earthLoaded', handleEarthLoaded);
+    };
+  }, []);
 
   // explosion sound
   const explosionSoundRef = useRef(null);
@@ -85,6 +99,8 @@ const AsteroidSimulation = () => {
           boxShadow: "0 8px 32px rgba(94, 42, 196, 0.3)",
         }}
       >
+
+        {isLoading && <SpaceLoader />}
         <Canvas
           camera={{ position: [0, 0, 5], fov: 45 }}
           style={{
@@ -111,7 +127,7 @@ const AsteroidSimulation = () => {
             {showFalling && selectedTarget && selectedAsteroid && (
               <AsteroidFall
                 targetPosition={selectedTarget.position}
-                spawnFromTarget={true} // 👈 tell asteroid to spawn from direction of target
+                spawnFromTarget={true}
                 onComplete={handleFallComplete}
                 asteroidSize={getAsteroidSize(selectedAsteroid.diameter)}
               />
