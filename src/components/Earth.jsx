@@ -161,3 +161,4 @@ function Earth({ onTargetSelect, selectedTarget }) {
 }
 
 export default Earth;
+useGLTF.preload(`${import.meta.env.BASE_URL}models/earth/earth.gltf`)

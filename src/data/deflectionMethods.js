@@ -1,0 +1,68 @@
+import { Target, TrendingUp, Zap, Crosshair } from "lucide-react";
+
+export const DEFLECTION_METHODS = [
+  {
+    id: "kinetic",
+    name: "Kinetic Impactor",
+    icon: Target,
+    description: "High-speed spacecraft collision. NASA's DART mission successfully used this method on Dimorphos asteroid",
+    effectiveness: {
+      rocky: 0.8,
+      "carbon-rich": 0.7,
+      "rocky-metallic": 0.75,
+      metallic: 0.65,
+      unknown: 0.6,
+    },
+    optimalAngle: 15,
+    maxMass: 5,
+    maxSpeed: 15,
+  },
+  {
+    id: "gravity",
+    name: "Gravity Tractor",
+    icon: TrendingUp,
+    description: "Uses gravitational pull to slowly alter trajectory. Safe but requires years of lead time",
+    effectiveness: {
+      rocky: 0.7,
+      "carbon-rich": 0.75,
+      "rocky-metallic": 0.6,
+      metallic: 0.65,
+      unknown: 0.5,
+    },
+    optimalAngle: 10,
+    maxMass: 3,
+    maxSpeed: 10,
+  },
+  {
+    id: "nuclear",
+    name: "Nuclear Device",
+    icon: Zap,
+    description: "Detonates near surface to vaporize material and create thrust. Last resort option",
+    effectiveness: {
+      rocky: 0.85,
+      "carbon-rich": 0.9,
+      "rocky-metallic": 0.8,
+      metallic: 0.75,
+      unknown: 0.7,
+    },
+    optimalAngle: 20,
+    maxMass: 10,
+    maxSpeed: 20,
+  },
+  {
+    id: "laser",
+    name: "Laser Ablation",
+    icon: Crosshair,
+    description: "Focused laser beam vaporizes surface material to create propulsion. Precise but power-intensive",
+    effectiveness: {
+      rocky: 0.75,
+      "carbon-rich": 0.8,
+      "rocky-metallic": 0.7,
+      metallic: 0.6,
+      unknown: 0.65,
+    },
+    optimalAngle: 12,
+    maxMass: 4,
+    maxSpeed: 12,
+  },
+];
