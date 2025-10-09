@@ -12,6 +12,7 @@ import { getRandomMessage } from "../data/messages";
 import Earth from "../components/EarthD";
 import Starfield from "../components/Starfield";
 import MissionAnimation from "../components/MissionAnimation";
+import MissionDialog from "../components/MissionDialog";
 
 const DefendEarth = () => {
   const [level, setLevel] = useState(1);
@@ -27,8 +28,34 @@ const DefendEarth = () => {
   const [pointsEarned, setPointsEarned] = useState(0);
   const [showAnimation, setShowAnimation] = useState(false);
   const [animationSuccess, setAnimationSuccess] = useState(false);
+  const [dialogActive, setDialogActive] = useState(true);
+  const [showDeflection, setShowDeflection] = useState(false);
+  const [showStats, setShowStats] = useState(false);
+  const [showThreat, setShowThreat] = useState(false);
 
   const currentAsteroid = ASTEROID_TEMPLATES[level - 1];
+
+  const handleHighlight = (panel) => {
+    if (panel === "all") {
+      setShowDeflection(true);
+      setShowStats(true);
+      setShowThreat(true);
+    } else if (panel == "stats"){
+      setShowStats(true);
+    }
+     else if (panel === "threat") {
+      setShowThreat(true);
+    } else if (panel === "deflection") {
+      setShowDeflection(true);
+    }
+  };
+
+  const handleDialogComplete = () => {
+    setDialogActive(false);
+    setShowDeflection(true);
+    setShowStats(true);
+    setShowThreat(true);
+  };
 
   const handleLaunch = (method, power, angle) => {
     setSelectedMethod(method);
@@ -155,7 +182,9 @@ const DefendEarth = () => {
               p-1
             "
           >
-            <DeflectionPanel asteroid={currentAsteroid} onLaunch={handleLaunch} level={level} />
+            {showDeflection && (
+              <DeflectionPanel asteroid={currentAsteroid} onLaunch={handleLaunch} level={level} />
+            )}
 
           </div>
 
@@ -203,11 +232,14 @@ const DefendEarth = () => {
 
           {/* Right Panels - Stats and Threat */}
           <div className="order-3 space-y-6">
-            <MissionStats level={level} score={score} lives={lives} />
-            <ThreatPanel asteroid={currentAsteroid} />
+            {showStats && <MissionStats level={level} score={score} lives={lives} />}
+            {showThreat && <ThreatPanel asteroid={currentAsteroid} />}
           </div>
         </div>
       </main>
+
+      <MissionDialog onComplete={handleDialogComplete} onHighlight={handleHighlight} />
+
 
       <MissionResultDialog
         open={dialogOpen}

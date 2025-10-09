@@ -21,10 +21,10 @@ function DefenseStrategies() {
       risk: "Very Low",
     },
     {
-      name: "Solar Sail",
+      name: "Laser Ablation",
       description:
-        "Attach reflective material to use solar pressure for deflection",
-      effectiveness: "Very Low",
+        "Fire lasers to vaporize surface material and nudge the asteroid off course",
+      effectiveness: "Medium",
       risk: "Low",
     },
   ];
