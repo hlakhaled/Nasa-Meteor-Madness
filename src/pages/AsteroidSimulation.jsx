@@ -14,21 +14,21 @@ const AsteroidSimulation = () => {
   const [showFalling, setShowFalling] = useState(false);
   const [showAnalysis, setShowAnalysis] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobileLayout, setIsMobileLayout] = useState(window.innerWidth < 900);
+
+  const explosionSoundRef = useRef(null);
 
   useEffect(() => {
-    const handleEarthLoaded = () => {
-      setIsLoading(false);
-    };
-    
-    window.addEventListener('earthLoaded', handleEarthLoaded);
-    
-    return () => {
-      window.removeEventListener('earthLoaded', handleEarthLoaded);
-    };
+    const handleResize = () => setIsMobileLayout(window.innerWidth < 900);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // explosion sound
-  const explosionSoundRef = useRef(null);
+  useEffect(() => {
+    const handleEarthLoaded = () => setIsLoading(false);
+    window.addEventListener("earthLoaded", handleEarthLoaded);
+    return () => window.removeEventListener("earthLoaded", handleEarthLoaded);
+  }, []);
 
   // asteroid scaling
   const getAsteroidSize = (diameter) => {
@@ -69,13 +69,13 @@ const AsteroidSimulation = () => {
         width: "100vw",
         height: "88vh",
         display: "flex",
-        flexDirection: "row",
+        flexDirection: isMobileLayout ? "column" : "row",
         background:
           "linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #0f0f0f 100%)",
         padding: "clamp(8px, 1.5vw, 20px)",
         gap: "clamp(8px, 1.5vw, 20px)",
         boxSizing: "border-box",
-        overflow: "hidden",
+        overflow: isMobileLayout ? "auto" : "hidden",
         fontFamily:
           "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       }}
@@ -85,10 +85,11 @@ const AsteroidSimulation = () => {
         <source src="/Nasa-Meteor-Madness/explosion.mp3" type="audio/mpeg" />
       </audio>
 
-      {/* Left Side */}
+      {/* Earth View */}
       <div
         style={{
-          flex: "1 1 65%",
+          flex: isMobileLayout ? "0 0 auto" : "1 1 65%",
+          height: isMobileLayout ? "50vh" : "auto",
           position: "relative",
           minWidth: 0,
           minHeight: 0,
@@ -99,7 +100,6 @@ const AsteroidSimulation = () => {
           boxShadow: "0 8px 32px rgba(94, 42, 196, 0.3)",
         }}
       >
-
         {isLoading && <SpaceLoader />}
         <Canvas
           camera={{ position: [0, 0, 5], fov: 45 }}
@@ -117,13 +117,11 @@ const AsteroidSimulation = () => {
 
           <Suspense fallback={null}>
             <Starfield count={5000} />
-
             <Earth
               scale={1}
               onTargetSelect={handleTargetSelect}
               selectedTarget={selectedTarget}
             />
-
             {showFalling && selectedTarget && selectedAsteroid && (
               <AsteroidFall
                 targetPosition={selectedTarget.position}
@@ -133,6 +131,7 @@ const AsteroidSimulation = () => {
               />
             )}
           </Suspense>
+
           <OrbitControls
             enableZoom={true}
             enablePan={false}
@@ -145,13 +144,12 @@ const AsteroidSimulation = () => {
         </Canvas>
       </div>
 
-      {/* Right Side */}
+      {/* Right (or bottom) Panel */}
       <div
         style={{
-          flex: "0 0 clamp(280px, 35%, 500px)",
-          minWidth: "320px",
-          maxWidth: "420px",
-          minHeight: 0,
+          flex: isMobileLayout ? "0 0 auto" : "0 0 clamp(280px, 35%, 500px)",
+          width: isMobileLayout ? "100%" : "auto",
+          minHeight: isMobileLayout ? "40vh" : 0,
           display: "flex",
           flexDirection: "column",
         }}

@@ -22,20 +22,20 @@ function Layout() {
 }
 
 function App() {
-  const bgAudioRef = useRef(null);
+  // const bgAudioRef = useRef(null);
   const clickAudioRef = useRef(null);
   const hasStartedBg = useRef(false); // track if music started
 
   const handleInteraction = () => {
     // Start background music on first user interaction
-    if (bgAudioRef.current && !hasStartedBg.current) {
-      bgAudioRef.current.volume = 0.3;
-      bgAudioRef.current.loop = true;
-      bgAudioRef.current.play().catch(() => {
-        console.log("Failed to play background music");
-      });
-      hasStartedBg.current = true;
-    }
+    // if (bgAudioRef.current && !hasStartedBg.current) {
+    //   bgAudioRef.current.volume = 0.3;
+    //   bgAudioRef.current.loop = true;
+    //   bgAudioRef.current.play().catch(() => {
+    //     console.log("Failed to play background music");
+    //   });
+    //   hasStartedBg.current = true;
+    // }
 
     // Play click sound
     if (clickAudioRef.current) {
@@ -49,9 +49,9 @@ function App() {
   return (
     <Router>
       {/* Background music */}
-      <audio ref={bgAudioRef}>
+      {/* <audio ref={bgAudioRef}>
         <source src="/Nasa-Meteor-Madness/music/Sakta.mp3" type="audio/mpeg" />
-      </audio>
+      </audio> */}
 
       {/* Click sound */}
       <audio ref={clickAudioRef}>
