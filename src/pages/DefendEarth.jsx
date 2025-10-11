@@ -32,6 +32,7 @@ const DefendEarth = () => {
   const [showDeflection, setShowDeflection] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showThreat, setShowThreat] = useState(false);
+  const [showScrollHint, setShowScrollHint] = useState(true);
 
   const currentAsteroid = ASTEROID_TEMPLATES[level - 1];
 
@@ -55,6 +56,7 @@ const DefendEarth = () => {
     setShowDeflection(true);
     setShowStats(true);
     setShowThreat(true);
+    setTimeout(() => setShowScrollHint(false), 5000);
   };
 
   const handleLaunch = (method, power, angle) => {
@@ -240,6 +242,19 @@ const DefendEarth = () => {
 
       <MissionDialog onComplete={handleDialogComplete} onHighlight={handleHighlight} />
 
+      {/* Scroll Hint Overlay */}
+      {showScrollHint && !dialogActive && (
+        <div 
+          className="fixed bottom-24 left-1/2 -translate-x-1/2 z-40 animate-fade-in lg:hidden"
+          onClick={() => setShowScrollHint(false)}
+        >
+          <div className="bg-purple-600/90 backdrop-blur-sm border border-purple-400/50 rounded-lg px-4 py-2 shadow-lg">
+            <p className="inter-text text-white text-sm font-medium text-center">
+              ↓ Scroll to see all panels ↓
+            </p>
+          </div>
+        </div>
+      )}
 
       <MissionResultDialog
         open={dialogOpen}

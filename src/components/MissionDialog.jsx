@@ -14,8 +14,6 @@ const MissionDialog = ({ onComplete, onHighlight }) => {
   const [audioEnabled, setAudioEnabled] = useState(false);
   const voiceAudioRef = useRef(null);
 
-
-  // Enable audio on first user interaction (fix autoplay issue)
   useEffect(() => {
     const enableAudio = () => {
       setAudioEnabled(true);
@@ -30,10 +28,8 @@ const MissionDialog = ({ onComplete, onHighlight }) => {
     };
   }, []);
 
-  // Handle keyboard "next" trigger
   useEffect(() => {
     const handleKeyNext = (e) => {
-      // Prevent skipping during typing
       if (!isTyping && isVisible) handleNext();
     };
     window.addEventListener("keydown", handleKeyNext);
@@ -61,18 +57,15 @@ const MissionDialog = ({ onComplete, onHighlight }) => {
     setDisplayedText("");
     setIsTyping(true);
 
-    // Highlight triggers
     if (index === 4 && onHighlight) onHighlight("threat");
     else if (index === 5 && onHighlight) onHighlight("deflection");
     else if (index === 8 && onHighlight) onHighlight("stats");
 
-    // stop previous voice
     if (voiceAudioRef.current) {
       voiceAudioRef.current.pause();
       voiceAudioRef.current.currentTime = 0;
     }
 
-    // play current voice
     if (audioEnabled && VOICE_FILES[index]) {
       const audio = new Audio(VOICE_FILES[index]);
       audio.volume = 0.8;
@@ -80,7 +73,6 @@ const MissionDialog = ({ onComplete, onHighlight }) => {
       audio.play().catch((err) => console.warn("Audio blocked:", err));
     }
 
-    // typing animation
     let i = 0;
     const interval = setInterval(() => {
       setDisplayedText(current.slice(0, i + 1));
@@ -140,29 +132,27 @@ const MissionDialog = ({ onComplete, onHighlight }) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.4 }}
-        className="fixed bottom-8 left-0 right-0 mx-auto w-[85%] max-w-[1400px] z-50"
+        className="fixed bottom-4 md:bottom-8 left-0 right-0 mx-auto w-[95%] md:w-[90%] lg:w-[85%] max-w-[1400px] z-50 px-2"
       >
         <div
-          className="relative bg-black/70 border-2 border-purple-500 rounded-md px-10 backdrop-blur-md shadow-2xl shadow-purple-500/20"
+          className="relative bg-black/70 border-2 border-purple-500 rounded-md px-4 py-4 md:px-8 md:py-5 lg:px-10 backdrop-blur-md shadow-2xl shadow-purple-500/20"
           onClick={handleNext}
           style={{ cursor: isTyping ? "default" : "pointer" }}
         >
-          {/* Close Button */}
           <button
             onClick={(e) => {
               e.stopPropagation();
               handleClose();
             }}
-            className="absolute top-4 right-4 p-1.5 rounded-lg transition-all hover:scale-110 z-10"
+            className="absolute top-2 right-2 md:top-4 md:right-4 p-1.5 rounded-lg transition-all hover:scale-110 z-10"
             aria-label="Skip introduction"
           >
-            <X className="w-5 h-5 text-white" />
+            <X className="w-4 h-4 md:w-5 md:h-5 text-white" />
           </button>
 
-          {/* Content */}
-          <div className="flex items-center justify-center gap-6 min-h-[180px]">
-            <div className="flex-1">
-              <p className="inter-text text-md leading-relaxed text-white">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 min-h-[140px] md:min-h-[180px]">
+            <div className="flex-1 order-2 md:order-1">
+              <p className="inter-text text-sm md:text-base leading-relaxed text-white">
                 {displayedText}
               </p>
 
@@ -171,7 +161,7 @@ const MissionDialog = ({ onComplete, onHighlight }) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
-                  className="inter-text font-light text-gray-400 text-sm mt-3"
+                  className="inter-text font-light text-gray-400 text-xs md:text-sm mt-2 md:mt-3"
                 >
                   [Click or Press any key to continue]
                 </motion.p>
@@ -182,12 +172,12 @@ const MissionDialog = ({ onComplete, onHighlight }) => {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className="flex-shrink-0"
+              className="flex-shrink-0 order-1 md:order-2"
             >
               <img
                 src={index === 1 || index === 8 ? astronautAnnoyed : astronaut}
                 alt="Mission Commander"
-                className="w-28 h-28 object-contain"
+                className="w-20 h-20 md:w-28 md:h-28 object-contain"
               />
             </motion.div>
           </div>
